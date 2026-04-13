@@ -1,7 +1,7 @@
-import { useTheme } from '@/components/theme-provider'
 import ButtonThemed from './components/ButtonThemed';
 import CustomHeader from './components/CustomHeader';
 import CustomFooter from './components/CustomFooter';
+import useTheme from '@/components/useTheme';
 
 const EjercicioPage = () => {
     const { theme, toggleTheme } = useTheme()
@@ -9,7 +9,7 @@ const EjercicioPage = () => {
     return (
         <>
             {/* HEADER  */}
-            <CustomHeader title='Tienda' list={[{name: 'Inicio', url: '#'}, {name: 'Contactanos', url: '#'}]}/>
+            <CustomHeader title='Tienda' list={[{name: 'Inicio', url: '#'}, {name: 'Contactanos', url: '#'}]} theme={theme} toggleTheme={toggleTheme}/>
 
             {/* MAIN  */}
             <div className='flex  justify-center items-center m-10'>
