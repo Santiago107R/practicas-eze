@@ -1,14 +1,19 @@
 import { Button } from '@/components/ui/button'
-import useTheme from '@/hooks/useTheme'
+import { Link, useNavigate } from 'react-router'
 
 const HomePage = () => {
-    const {toggleTheme} = useTheme()
+    const navigate = useNavigate()
+
+    const navigateToThemePage = () => {
+        navigate('theme')
+    }
 
     return (
         <>
             <div className='flex flex-col items-center justify-center p-3'>
-                <p className='text-3xl'>Hola</p>
-                <Button className='py-2 px-5 rounded-xl' onClick={toggleTheme}>Press</Button>
+                <p className='text-3xl'>Bienvenido !!!</p>
+                <Link to={'theme'}><Button className='py-2 px-5 rounded-xl cursor-pointer' >Link</Button></Link>
+                <Button className='py-2 px-5 rounded-xl cursor-pointer mt-2' onClick={navigateToThemePage}>Navigate</Button>
             </div>
         </>
     )

@@ -1,14 +1,14 @@
-import useTheme from "@/components/useTheme";
-import type { links } from "../links";
 import { Moon, Sun } from "lucide-react";
 import type { Theme } from "@/types/theme";
+import type { links } from "@/user/pages/theme/links";
+import { Link } from "react-router";
 
 interface Props {
     title: string;
     list: links[];
-    theme: Theme
+    theme?: Theme
 
-    toggleTheme: () => void
+    toggleTheme?: () => void
 }
 
 const CustomHeader = ({title, list, theme, toggleTheme}: Props) => {
@@ -18,7 +18,7 @@ const CustomHeader = ({title, list, theme, toggleTheme}: Props) => {
             <nav>
                 <ul className='flex flex-row gap-2'>
                     {list.map(({name, url}) => (
-                        <li key={name}><a className="hover:text-gray-300 transition-colors" href={url}>{name}</a></li>
+                        <li key={name}><Link className="hover:text-gray-300 transition-colors" to={url}>{name}</Link></li>
                     ))}
                     <li><button onClick={toggleTheme}>{theme === 'dark' ? (<Moon />) : (<Sun />)}</button></li>
                 </ul>

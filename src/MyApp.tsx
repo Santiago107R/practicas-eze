@@ -1,11 +1,10 @@
-// import HomePage from "./user/pages/home/HomePage"
-// import SemaforoPage from './user/pages/semaforo/SemaforoPage';
-import EjercicioPage from './user/pages/ejercicio1/EjercicioPage';
+import { RouterProvider } from "react-router"
+import { AppRouter } from "./app.router"
 
 const MyApp = () => {
     return (
         <div>
-            <EjercicioPage />
+            <RouterProvider router={AppRouter}  />
         </div>
     )
 }

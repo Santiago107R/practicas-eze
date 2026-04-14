@@ -1,16 +1,14 @@
+import CustomHeader from '@/components/CustomHeader';
 import ButtonThemed from './components/ButtonThemed';
-import CustomHeader from './components/CustomHeader';
-import CustomFooter from './components/CustomFooter';
 import useTheme from '@/components/useTheme';
+import CustomFooter from '@/components/CustomFooter';
 
-const EjercicioPage = () => {
+const ThemePage = () => {
     const { theme, toggleTheme } = useTheme()
 
     return (
         <>
-            {/* HEADER  */}
-            <CustomHeader title='Tienda' list={[{name: 'Inicio', url: '#'}, {name: 'Contactanos', url: '#'}]} theme={theme} toggleTheme={toggleTheme}/>
-
+          
             {/* MAIN  */}
             <div className='flex  justify-center items-center m-10'>
 
@@ -20,10 +18,9 @@ const EjercicioPage = () => {
                 </main>
             </div>
 
-            {/* FOOTER  */}
-            <CustomFooter description={`© ${new Date().getFullYear()} Yo. todos los derechos reservados`} links={[{name: 'GitHub', url: '#'}, {name: 'Linkedin', url: '#'}]}/>
+            
         </>
     )
 }
 
-export default EjercicioPage
+export default ThemePage
