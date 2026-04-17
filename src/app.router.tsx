@@ -4,6 +4,7 @@ import ThemePage from "./user/pages/theme/ThemePage";
 import UserLayout from "./user/layouts/UserLayout";
 import ContactPage from "./user/contact/ContactPage";
 import { lazy } from "react";
+import RandomPage from "./gifs/pages/random/RandomPage";
 
 const AdminPage = lazy(() => import('./admin/pages/admin/AdminPage'))
 
@@ -29,6 +30,10 @@ export const AppRouter = createHashRouter([
     {
         path: 'admin',
         element: <AdminPage />
+    },
+    {
+        path: 'gifs',
+        element: <RandomPage />
     },
     // {
     //     path: 'theme',

@@ -6,7 +6,7 @@ const UserLayout = () => {
     return (
         <>
             {/* HEADER  */}
-            <CustomHeader title='Tienda' list={[{ name: 'Inicio', url: '/' }, { name: 'Contactanos', url: 'contact' }, {name: 'theme', url: 'theme'}]}/>
+            <CustomHeader title='Tienda' list={[{ name: 'Inicio', url: '/' }, { name: 'Contactanos', url: 'contact' }, {name: 'theme', url: 'theme'}, {name: 'gifs', url: 'gifs'}]}/>
 
             <Outlet />
 
