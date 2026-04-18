@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react"
 import { getRandomGif } from "../action/get-random-gif.action"
 
-const useGifs = () => {
+const useGif = () => {
     const [gif, setGif] = useState<string | null>(null)
     const [loading, setLoading] = useState(false)
 
@@ -32,4 +32,4 @@ const useGifs = () => {
     }
 }
 
-export default useGifs
+export default useGif
